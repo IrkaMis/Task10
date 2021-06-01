@@ -1,20 +1,28 @@
 // function getFullName
 function getFullName(firstName, secondName) {
-    alert(firstName + " " + secondName);
+    return firstName + " " + secondName;
   }
-
-getFullName("Irena", "Miś");
-
+// alert(getFullName("Irena", "Miś"));
 
 // function getPhoneNumber
 function getPhoneNumber(phoneNumber) {
   if (typeof phoneNumber === "string" && phoneNumber.length >= 9) {
-    alert("+48" + phoneNumber);
+    return "+48" + phoneNumber;
   } else {
-    alert("+48 phone error");
+    return "+48 phone error";
   }
 }
+// alert(getPhoneNumber("123456789"));
+// alert(getPhoneNumber(123456789));
+// alert(getPhoneNumber("12345678"));
 
-getPhoneNumber("123456789");
-getPhoneNumber(123456789);
-getPhoneNumber("12345678");
+// function start
+function start() {
+  let fullName = getFullName("Irena", "Miś");
+  let phoneNumber = getPhoneNumber("123456789");
+
+  alert(fullName);
+  alert(phoneNumber);
+}
+
+start();
